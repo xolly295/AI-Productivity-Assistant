@@ -1,47 +1,101 @@
 # AI Productivity Assistant
 
-An AI-powered assistant to automate workplace tasks including:
+A comprehensive AI-powered workplace productivity assistant built with React, Next.js, and Tailwind CSS.
 
-- Email generation
-- Meeting summarization
-- Task planning
-- Research assistance
-- Chatbot interaction
+## Features
 
-This repository contains the project plan, prompt templates, architecture notes, and a minimal FastAPI prototype to get started.
+✨ **Smart Email Generator** - Draft professional emails with customizable tone and audience
 
-Deadline: Friday at 11:00 AM (build milestones and deliverables below aim to complete features and documentation by the deadline).
+📝 **Meeting Notes Summarizer** - Extract key points, actions, and deadlines from meeting transcripts
 
-Quickstart
+✅ **AI Task Planner** - Organize and prioritize tasks with automatic urgency indicators
 
-1. Create a virtual environment and install dependencies:
+🔍 **Research Assistant** - Get AI-powered insights on any workplace-related topic
 
-   python -m venv .venv
-   source .venv/bin/activate  # macOS / Linux
-   .\.venv\Scripts\activate  # Windows
-   pip install -r requirements.txt
+💬 **AI Chatbot** - Real-time conversation interface for instant workplace assistance
 
-2. Create a .env file with your OpenAI API key (or set OPENAI_API_KEY in your environment):
+📊 **Dashboard** - View productivity metrics and activity summary
 
-   OPENAI_API_KEY=sk-...
+## Getting Started
 
-3. Run the FastAPI prototype:
+### Prerequisites
+- Node.js 18.0 or later
+- npm or yarn
 
-   uvicorn src.app.main:app --reload
+### Installation
 
-What's included in this commit
+1. Clone the repository:
+```bash
+git clone https://github.com/xolly295/AI-Productivity-Assistant.git
+cd AI-Productivity-Assistant
+```
 
-- README.md (this file)
-- ARCHITECTURE.md (design & components)
-- PROMPTS.md (prompt templates and prompt-engineering notes)
-- Minimal FastAPI prototype under src/app
-- requirements.txt and .gitignore
+2. Install dependencies:
+```bash
+npm install
+```
 
-How to contribute
+3. Run the development server:
+```bash
+npm run dev
+```
 
-- Follow the issues and milestones in GitHub. Keep changes small and focused.
-- Add unit tests and run locally before opening PRs.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-Ethics & Safety
+## Project Structure
 
-This project follows responsible AI guidelines: explicit user consent before sending sensitive data to third-party APIs; redaction guidelines for PII; and rate limiting and monitoring recommendations in ARCHITECTURE.md.
+```
+├── src/
+│   ├── components/
+│   │   └── AIWorkplaceAssistant.jsx    # Main component
+│   ├── app/
+│   │   ├── page.js                     # Home page
+│   │   ├── globals.css                 # Global styles
+│   │   └── layout.js                   # Layout wrapper
+│   └── pages/
+├── public/
+├── package.json
+├── tailwind.config.js
+└── postcss.config.js
+```
+
+## Dependencies
+
+- **React 18** - UI library
+- **Next.js 14** - React framework
+- **Tailwind CSS** - Utility-first CSS framework
+- **Lucide React** - Icon library
+
+## Usage
+
+The main component `AIWorkplaceAssistant` includes:
+
+- Full state management with React hooks
+- Mobile-responsive design
+- Accessibility features (labels, aria-labels, semantic HTML)
+- Loading states and error handling
+- Keyboard shortcuts (Enter to send)
+
+## Configuration
+
+To connect real AI APIs, update the following handler functions in `AIWorkplaceAssistant.jsx`:
+
+- `handleGenerateEmail()` - Connect to your email generation API
+- `handleSummarizeMeeting()` - Connect to your meeting transcription API
+- `handleResearch()` - Connect to your research/search API
+- `handleSendMessage()` - Connect to your chatbot/LLM API
+
+## Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## License
+
+MIT
+
+## Author
+
+Xolile C. Malope (@xolly295)
